@@ -1,0 +1,57 @@
+﻿<section id="speaker-view" class="mainbar"
+         data-ng-controller="prospectdetail as vm">
+    <section class="matter">
+        <div class="container">
+            <div>
+                <button class="btn btn-info btn-form-md"
+                        data-ng-click="vm.goBack()">
+                    <i class="fa fa-hand-o-left"></i>Back
+                </button>
+                <button class="btn btn-info btn-form-md"
+                        data-ng-click="vm.cancel()" data-ng-disabled="!vm.canSave">
+                    <i class="fa fa-undo"></i>Cancel
+                </button>
+                <button class="btn btn-info btn-form-md"
+                        data-ng-click="vm.save()" data-ng-disabled="!vm.canSave">
+                    <i class="fa fa-save"></i>Save
+                </button>
+                <span data-ng-show="vm.hasChanges" class="dissolve-animation ng-hide flag-haschanges">
+                    <i class="fa fa-asterisk fa fa-asterisk-large" rel="tooltip" title="You have changes"></i>
+                </span>
+            </div>
+            <div class="widget wgreen">
+                <div data-cc-widget-header title="Edit {{vm.model.name || 'New Prospect'}}"></div>
+                <div class="widget-content user">
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <div>
+                            <input class="form-control" data-ng-model="vm.model.name" data-z-validate placeholder="Prospect Name" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Type</label>
+                        <div>
+                            <select class="form-control" data-ng-model="vm.model.type" data-z-validate placeholder="Prospect Type">
+                                <option value="Type1">Type 1</option>
+                                <option value="Type2">Type 2</option>
+                                <option value="Type3">Type 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Additional Information</label>
+                        <div>
+                            <textarea class="form-control" data-ng-model="vm.model.notes" data-z-validate placeholder="Additional Information"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Closed</label>
+                        <div>
+                            <input type="checkbox" data-ng-model="vm.model.closed" data-z-validate />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

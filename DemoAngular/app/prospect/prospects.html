@@ -1,0 +1,36 @@
+﻿<section id="dashboard-view" class="mainbar" data-ng-controller="prospects as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="widget wviolet">
+                        <div data-cc-widget-header title="Prospects" allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <table class="table table-condensed table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Notes</th>
+                                        <th>Type</th>
+                                        <th>Closed</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="p in vm.items">
+                                        <td><a href="#/prospect/{{p.id}}">{{p.name}}</a></td>
+                                        <td>{{p.notes}}</td>
+                                        <td>{{p.type}}</td>
+                                        <td>{{p.closed}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
