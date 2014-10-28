@@ -33,7 +33,6 @@
             {
                 url: '/prospect/new',
                 config: {
-                    controller: 'prospectdetail',
                     title: 'prospectdetail',
                     templateUrl: 'app/prospect/prospectdetail.html',
                     settings: {
